@@ -1,3 +1,86 @@
+.wholePageDiv {
+    height: 940px;
+    text-align-last: center;
+    border-style: solid;
+    border-color: lightskyblue;
+    padding: 10px;
+    font-style: normal;
+    background-color: red;
+}
+
+.flightSearchHeader {
+    text-decoration: underline;
+}
+.searchForFlightsDiv {
+    height: 350;
+    border-style: groove;
+    border-color: lightskyblue;
+    padding: 5px;
+    background-color: orange;
+}
+
 .departFromForm {
-    background-color: aqua
+/*    float: left;*/
+}
+
+.destinationForm {
+/*    float: left;*/
+}
+
+.dateofDepartureForm {
+/*    float: left;*/
+}
+
+.dateOfArrivalForm {
+/*    float: left;*/
+}
+
+.numberOfTravelersForm {
+/*    float: left;*/
+}
+
+
+
+
+
+.loginDiv {
+    height:400;
+    text-align: center;
+    background-color: green;
+}
+
+.loginHeader {
+    text-decoration: underline;
+}
+
+.signUpHeader {
+    text-decoration: underline;
+}
+.login {
+    float:left;
+    height: 340px;
+    width: 340px;
+    border-style: groove;
+    border-color: lightskyblue;
+    background-color: yellow;
+}
+
+.signUp {
+    float: left;
+    border-style: groove;
+    border-color: lightskyblue;
+    height: 340px;
+    width: 410px;
+    background-color: blue;
+}
+
+
+#signUpForm {
+    width: 0px;
+    padding-left: 20px;
+}
+
+#loginForm {
+    width: 0px;
+    padding-left: 20px;
 }
