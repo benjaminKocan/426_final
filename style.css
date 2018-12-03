@@ -1,6 +1,6 @@
 body {
    
-    text-align-last: left;
+    text-align-last: center;
     border-style: solid;
     border-color: lightskyblue;
     padding: 10px;
@@ -20,7 +20,7 @@ body {
 
 #airlines_table tr, td {
     padding: 10px;
-    text-align: center;
+/*    text-align: center;*/
 }
 
 #airlines_table tr:hover {
@@ -29,7 +29,8 @@ body {
 
 #airlines_table tr:first-child td {
     font-size: 30px;
-    font-style:oblique;
+    color: white;
+    background-color: cornflowerblue;
 }
 
 .findAirlinesHeader {
