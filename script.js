@@ -43,11 +43,10 @@ var build_airlines_interface = function() {
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
 
     body.append('<input type="text" id="search_text" placeholder="Search Airlines">');
-    let text = $('#search_text').val();
-    body.append('<button class="search_butt" onclick="airlines_filter_function('+ text + ')" value="Search">Search</button>');
+    body.append('<button class="search_butt" onclick="airlines_filter_function()">Search</button>');
 
     let airlines_table = $("<table id='airlines_table'></table>");
-    airlines_table.append('<tr><td>Airline</td><td>ID</td></tr>');
+    airlines_table.append('<tr><td><em>Name</em></td><td><em>ID</em></td></tr>');
     body.append(airlines_table);
 
     let airline_add_div = $("<div>New Airline: <input id='new_airline_name' type='text'><br>" +
@@ -165,8 +164,11 @@ var make_airports_page = function () {
         });
 };
 
-var airlines_filter_function = function (input) {
+var airlines_filter_function = function () {
     let body = $('body');
+    let sear_text = $('#search_text').val();
+
+    console.log(sear_text);
 
     body.empty();
 
@@ -178,8 +180,7 @@ var airlines_filter_function = function (input) {
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
 
     body.append('<input type="text" id="search_text" placeholder="Search Airlines">');
-    let text = $('#search_text').val();
-    body.append('<button class="search_butt" onclick="airlines_filter_function('+ text + ')" value="Search"></button>');
+    body.append('<button class="search_butt" onclick="airlines_filter_function()">Search</button>');
 
     let airlines_table = $("<table id='airlines_table'></table>");
     airlines_table.append('<tr><td>Name</td><td>ID</td></tr>');
@@ -190,7 +191,7 @@ var airlines_filter_function = function (input) {
 
     body.append(airline_add_div);
 
-    $.ajax(root_url + 'airlines?filter[name]=' + input,
+    $.ajax(root_url + 'airlines?filter[name]=' + sear_text,
         {
             type: 'GET',
             xhrFields: {withCredentials: true},
@@ -205,6 +206,3 @@ var airlines_filter_function = function (input) {
         }
     )
 };
-
-
-
