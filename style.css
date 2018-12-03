@@ -1,11 +1,11 @@
-.wholePageDiv {
+body {
     height: 940px;
     text-align-last: center;
     border-style: solid;
     border-color: lightskyblue;
     padding: 10px;
     font-style: normal;
-    background-color: red;
+    background-color: lightgrey;
 }
 
 .flightSearchHeader {
