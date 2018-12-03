@@ -57,8 +57,7 @@ body {
     font-size: 40px;
 }
 
-<<<<<<< HEAD
-=======
+
 #flight_list {
     width:100%;
 }
@@ -89,9 +88,29 @@ body {
     font-size: 40px;
 }
 
-<<<<<<< HEAD
+
+#airports_table {
+    width:100%;
+}
+
+#airports_table, tr, td {
+    border-style: groove;
+    font-size: 20px;
+    border-color: cornflowerblue;
+    padding: 10px;
+}
+
+#airports_table tr:hover {
+    background-color: aquamarine;
+}
+
+#airports_table tr:first-child td {
+    font-size: 30px;
+    color: white;
+    background-color: cornflowerblue;
+    font-style: normal;
+    font-weight:bold;
+}
 
 
-=======
->>>>>>> d4b4604dad35fe6270b47028e399544a6338adac
->>>>>>> 6706b1a64aba25ea2cc8fd102fe707644213c382
+
