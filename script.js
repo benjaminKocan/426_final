@@ -11,25 +11,25 @@ $(document).ready(() => {
         console.log(user);
         console.log(pass);
 
-        $.ajax(root_url + 'login',
-            {
-                type: 'GET',
-                xhrFields: {withCredentials: true},
-                data: {
-                    username: user,
-                    password: pass
-                },
-                success: (response) => {
-                    if (response.status) {
-                        build_question_interface();
-                    } else {
-                        $('#mesg_div').html("Login failed. Try again.");
-                    }
-                },
-                error: () => {
-                    alert('error');
+        $.ajax({
+            url: root_url + 'sessions',
+            type: 'POST',
+            data: {
+                "user": {
+                    "username": user,
+                    "password": pass
                 }
-            });
+            },
+            xhrFields: { withCredentials: true },
+            success: (response) => {
+                if (response.status) {
+                    console.log('it works');
+                }
+            },
+            error: () => {
+                alert("error");
+;            }
+        });
     });
 
 });

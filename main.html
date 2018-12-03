@@ -3,8 +3,11 @@
 <head>
     <title>The Flight Finder</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    
-    
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
     
 <body>
@@ -48,12 +51,11 @@
                 <h2 class="loginHeader">Enter Login information</h2>
                 <form id="loginForm">
                     Username:<br>
-                    <input type="text"><br>
+                    <input type="text" id="login_user"><br>
                     Password:<br>
-                    <input type="text"><br>
+                    <input type="text" id="login_pass"><br>
                 </form>
-                <button type="submit" form="loginForm" value="Submit">Submit</button>
-                
+                <button type="submit" form="loginForm" id="login_butt" value="Submit">Submit</button>
             </div>
             
             <div class="signUp">
@@ -71,8 +73,6 @@
                 
             </div>
         </div>
-        
-        
         
     </div>
     
