@@ -18,12 +18,12 @@ body {
     width: 600px;
 }
 
-tr, td {
+#airlines_table tr, td {
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
-tr:hover {
+#airlines_table tr:hover {
     background-color: aquamarine;
 }
 
@@ -54,3 +54,8 @@ tr:hover {
     color:cornflowerblue;
     font-size: 40px;
 }
+
+#flight_list {
+    
+}
+

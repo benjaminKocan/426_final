@@ -44,7 +44,7 @@ var build_airlines_interface = function() {
 
     body.append('<input type="text" id="search_text" placeholder="Search Airlines">');
     let text = $('#search_text').val();
-    body.append('<button class="search_butt" onclick="airlines_filter_function('+ text + ')" value="Search"></button>');
+    body.append('<button class="search_butt" onclick="airlines_filter_function('+ text + ')" value="Search">Search</button>');
 
     let airlines_table = $("<table id='airlines_table'></table>");
     airlines_table.append('<tr><td>Airline</td><td>ID</td></tr>');
