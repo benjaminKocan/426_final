@@ -191,7 +191,7 @@ var airlines_filter_function = function () {
 
     body.append(airline_add_div);
 
-    $.ajax(root_url + 'airlines?filter[name]=' + input,
+    $.ajax(root_url + 'airlines?filter[name]=' + sear_text,
         {
             type: 'GET',
             xhrFields: {withCredentials: true},
