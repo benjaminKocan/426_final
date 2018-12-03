@@ -3,8 +3,12 @@ body {
     text-align-last: left;
 =======
    
+<<<<<<< HEAD
     text-align-last: center;
 >>>>>>> master
+=======
+    text-align: center;
+>>>>>>> benBranch
     border-style: solid;
     border-color: lightskyblue;
     padding: 10px;
@@ -15,16 +19,19 @@ body {
 #airlines_table, tr, td {
     border-style: groove;
     font-size: 20px;
-    border-color: cornflowerblue
+    border-color: cornflowerblue;
+/*    text-align: center;*/
 }
 
 #airlines_table {
-    width: 600px;
+    width: 100%
+/*    position: absolute;*/
 }
 
 #airlines_table tr, td {
     padding: 10px;
 /*    text-align: center;*/
+    
 }
 
 #airlines_table tr:hover {
@@ -35,6 +42,8 @@ body {
     font-size: 30px;
     color: white;
     background-color: cornflowerblue;
+    font-style: normal;
+    font-weight:bold;
 }
 
 .findAirlinesHeader {
@@ -45,11 +54,11 @@ body {
 }
 
 #airport_list li  {
+    width: 100%;
     list-style-type: none;
     border-style: groove;
     border-color: cornflowerblue;
-    padding: 5px;
-    width: 550px;
+/*    padding: 5px;*/
     
 }
 
@@ -62,5 +71,9 @@ body {
 
 #flight_list {
     
+}
+
+.airlineColumn {
+/*    font-weight: bold;*/
 }
 
