@@ -104,7 +104,6 @@ var make_flights_page = function () {
 
     let flight_add_div = $("<div>Name: <input id='new_flight_name' type='text'><br>" +
         "<button id='make_flight'>Create</button></div>");
-
     body.append(flight_add_div);
 
     $.ajax(root_url + "flights",
@@ -144,8 +143,9 @@ var make_airports_page = function () {
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
 
-    let airport_list = $("<ul id='airport_list'></ul>");
-    body.append(airport_list);
+    let airports_table = $("<table id='airports_table'></table>");
+    airports_table.append('<tr><td>Name</td><td>City</td><td>Code</td></tr>');
+    body.append(airports_table);
 
     let airport_add_div = $("<div>Name: <input id='new_airport_name' type='text'><br>" +
         "<button id='make_airport'>Create</button></div>");
@@ -158,7 +158,11 @@ var make_airports_page = function () {
             xhrFields: {withCredentials: true},
             success: (airports) => {
                 for (let i=0; i<airports.length; i++) {
-                    airport_list.append("<li>" + airports[i].name + "</li>");
+                    let row = $('<tr></tr>');
+                    row.append("<td>" + airports[i].name + "</td>");
+                    row.append("<td>"+ airports[i].city + "</td>");
+                    row.append('<td>' + airports[i].code + '</td>');
+                    airports_table.append(row);
                 }
             }
         });
