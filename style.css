@@ -1,9 +1,66 @@
 body {
+<<<<<<< HEAD
     text-align-last: left;
+=======
+   
+    text-align-last: center;
+>>>>>>> master
     border-style: solid;
     border-color: lightskyblue;
     padding: 10px;
     font-style: normal;
-    background-color: lightgrey;
+    background-color:aliceblue;
+}
+
+#airlines_table, tr, td {
+    border-style: groove;
+    font-size: 20px;
+    border-color: cornflowerblue
+}
+
+#airlines_table {
+    width: 600px;
+}
+
+#airlines_table tr, td {
+    padding: 10px;
+/*    text-align: center;*/
+}
+
+#airlines_table tr:hover {
+    background-color: aquamarine;
+}
+
+#airlines_table tr:first-child td {
+    font-size: 30px;
+    color: white;
+    background-color: cornflowerblue;
+}
+
+.findAirlinesHeader {
+    text-decoration: underline;
+    font-family:sans-serif;
+    color:cornflowerblue;
+    font-size: 40px;
+}
+
+#airport_list li  {
+    list-style-type: none;
+    border-style: groove;
+    border-color: cornflowerblue;
+    padding: 5px;
+    width: 550px;
+    
+}
+
+.airportsPageHeader {
+    text-decoration: underline;
+    font-family:sans-serif;
+    color:cornflowerblue;
+    font-size: 40px;
+}
+
+#flight_list {
+    
 }
 
