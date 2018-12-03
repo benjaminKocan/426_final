@@ -36,6 +36,11 @@ var build_airlines_interface = function() {
     body.empty();
 
     body.append("<h2>Airlines</h2>");
+    body.append('<nav class="navbar" id="navbar"></nav>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
 
     let airline_list = $("<ul id='airlines_list'></ul>");
     body.append(airline_list);
@@ -44,7 +49,6 @@ var build_airlines_interface = function() {
         "<button id='make_airline'>Create</button></div>");
 
     body.append(airline_add_div);
-
 
     $.ajax(root_url + "airlines",
         {
@@ -77,6 +81,76 @@ var build_airlines_interface = function() {
 
 };
 
+var make_flights_page = function () {
+    let body = $('body');
+    body.empty();
+    body.append("<h2>Flights</h2>");
+    body.append('<nav class="navbar" id="navbar"></nav>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+
+    let flights_list = $("<ul id='flight_list'></ul>");
+    body.append(flights_list);
+
+    let flight_add_div = $("<div>Name: <input id='new_flight_name' type='text'><br>" +
+        "<button id='make_flight'>Create</button></div>");
+
+    body.append(flight_add_div);
+
+    $.ajax(root_url + "flights",
+        {
+            type: 'GET',
+            xhrFields: {withCredentials: true},
+            success: (flights) => {
+                for (let i=0; i<flights.length; i++) {
+                    flights_list.append("<li>" + flights[i].number + "</li>");
+                }
+            }
+        });
+};
+
+var make_tickets_page = function () {
+    let body = $('body');
+    body.empty();
+    body.append("<h2>Tickets</h2>");
+    body.append('<nav class="navbar" id="navbar"></nav>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+};
+
+var make_airports_page = function () {
+    let body = $('body');
+    body.empty();
+    body.append("<h2>Airports</h2>");
+    body.append('<nav class="navbar" id="navbar"></nav>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+
+    let airport_list = $("<ul id='airport_list'></ul>");
+    body.append(airport_list);
+
+    let airport_add_div = $("<div>Name: <input id='new_airport_name' type='text'><br>" +
+        "<button id='make_airport'>Create</button></div>");
+
+    body.append(airport_add_div);
+
+    $.ajax(root_url + "airports",
+        {
+            type: 'GET',
+            xhrFields: {withCredentials: true},
+            success: (airports) => {
+                for (let i=0; i<airports.length; i++) {
+                    airport_list.append("<li>" + airports[i].name + "</li>");
+                }
+            }
+        });
+};
 
 
 
