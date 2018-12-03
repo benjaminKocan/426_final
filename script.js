@@ -13,6 +13,7 @@ $(document).ready(() => {
             {
                 type: 'POST',
                 xhrFields: {withCredentials: true},
+                datatype: 'JSON',
                 data: {
                     user: {
                         username: user,
@@ -20,58 +21,59 @@ $(document).ready(() => {
                     }
                 },
                 success: () => {
-                    build_airlines_interface();
+                    //build_airlines_interface();
+                    alert('fuck yo couch');
                 },
                 error: (jqxhr, status, error) => {
-                    alert(error);
+                    alert('shit');
                 }
             });
     });
 });
 
-var build_airlines_interface = function() {
-    let body = $('body');
-
-    body.empty();
-
-    body.append("<h2>Airlines</h2>");
-
-    let airline_list = $("<ul id='airlines_list'></ul>");
-    body.append(airline_list);
-
-    let airline_add_div = $("<div>Name: <input id='new_airline_name' type='text'><br>" +
-        "<button id='make_airline'>Create</button></div>");
-
-    body.append(airline_add_div);
-
-
-    $.ajax(root_url + "airlines",
-        {
-            type: 'GET',
-            xhrFields: {withCredentials: true},
-            success: (airlines) => {
-                for (let i=0; i<airlines.length; i++) {
-                    airline_list.append("<li>" + airlines[i].name + "</li>");
-                }
-            }
-        });
-
-    $('#make_airline').on('click', () => {
-        let airline_name = $('#new_airline_name').val();
-
-        $.ajax(root_url + "airlines",
-            {
-                type: 'POST',
-                data: {
-                    airline: {
-                        name: airline_name
-                    }
-                },
-                xhrFields: {withCredentials: true},
-                success: (airline) => {
-                    airline_list.append("<li>" + airline.name + "</li>");
-                }
-            });
-    });
-
-};
+// var build_airlines_interface = function() {
+//     let body = $('body');
+//
+//     body.empty();
+//
+//     body.append("<h2>Airlines</h2>");
+//
+//     let airline_list = $("<ul id='airlines_list'></ul>");
+//     body.append(airline_list);
+//
+//     let airline_add_div = $("<div>Name: <input id='new_airline_name' type='text'><br>" +
+//         "<button id='make_airline'>Create</button></div>");
+//
+//     body.append(airline_add_div);
+//
+//
+//     $.ajax(root_url + "airlines",
+//         {
+//             type: 'GET',
+//             xhrFields: {withCredentials: true},
+//             success: (airlines) => {
+//                 for (let i=0; i<airlines.length; i++) {
+//                     airline_list.append("<li>" + airlines[i].name + "</li>");
+//                 }
+//             }
+//         });
+//
+//     $('#make_airline').on('click', () => {
+//         let airline_name = $('#new_airline_name').val();
+//
+//         $.ajax(root_url + "airlines",
+//             {
+//                 type: 'POST',
+//                 data: {
+//                     airline: {
+//                         name: airline_name
+//                     }
+//                 },
+//                 xhrFields: {withCredentials: true},
+//                 success: (airline) => {
+//                     airline_list.append("<li>" + airline.name + "</li>");
+//                 }
+//             });
+//     });
+//
+// };
