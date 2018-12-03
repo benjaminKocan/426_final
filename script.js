@@ -42,8 +42,13 @@ var build_airlines_interface = function() {
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
 
-    let airline_list = $("<ul id='airlines_list'></ul>");
-    body.append(airline_list);
+    body.append('<input type="text" id="search_text" placeholder="Search Airlines">');
+    let text = $('#search_text').val();
+    body.append('<button class="search_butt" onclick="airlines_filter_function('+ text + ')" value="Search"></button>');
+
+    let airlines_table = $("<table id='airlines_table'></table>");
+    airlines_table.append('<tr><td>Name</td><td>ID</td></tr>');
+    body.append(airlines_table);
 
     let airline_add_div = $("<div>Name: <input id='new_airline_name' type='text'><br>" +
         "<button id='make_airline'>Create</button></div>");
@@ -56,7 +61,10 @@ var build_airlines_interface = function() {
             xhrFields: {withCredentials: true},
             success: (airlines) => {
                 for (let i=0; i<airlines.length; i++) {
-                    airline_list.append("<li>" + airlines[i].name + "</li>");
+                    let row = $('<tr></tr>');
+                    row.append("<td>" + airlines[i].name + "</td>");
+                    row.append("<td>"+ airlines[i].id + "</td>");
+                    airlines_table.append(row);
                 }
             }
         });
@@ -91,8 +99,9 @@ var make_flights_page = function () {
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
 
-    let flights_list = $("<ul id='flight_list'></ul>");
-    body.append(flights_list);
+    let flights_table = $("<table id='flight_list'></table>");
+    flights_table.append('<tr><td>Number</td><td>Departure Time</td><td>Arrival Time</td></tr>');
+    body.append(flights_table);
 
     let flight_add_div = $("<div>Name: <input id='new_flight_name' type='text'><br>" +
         "<button id='make_flight'>Create</button></div>");
@@ -105,7 +114,11 @@ var make_flights_page = function () {
             xhrFields: {withCredentials: true},
             success: (flights) => {
                 for (let i=0; i<flights.length; i++) {
-                    flights_list.append("<li>" + flights[i].number + "</li>");
+                    let row = $('<tr></tr>');
+                    row.append("<td>" + flights[i].number + "</td>");
+                    row.append("<td>"+ flights[i].departs_at.substring(11,16) + "</td>");
+                    row.append('<td>' + flights[i].arrives_at.substring(11,16) + '</td>');
+                    flights_table.append(row);
                 }
             }
         });
@@ -150,6 +163,47 @@ var make_airports_page = function () {
                 }
             }
         });
+};
+
+var airlines_filter_function = function (input) {
+    let body = $('body');
+
+    body.empty();
+
+    body.append("<h2>Airlines</h2>");
+    body.append('<nav class="navbar" id="navbar"></nav>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+
+    body.append('<input type="text" id="search_text" placeholder="Search Airlines">');
+    let text = $('#search_text').val();
+    body.append('<button class="search_butt" onclick="airlines_filter_function('+ text + ')" value="Search"></button>');
+
+    let airlines_table = $("<table id='airlines_table'></table>");
+    airlines_table.append('<tr><td>Name</td><td>ID</td></tr>');
+    body.append(airlines_table);
+
+    let airline_add_div = $("<div>Name: <input id='new_airline_name' type='text'><br>" +
+        "<button id='make_airline'>Create</button></div>");
+
+    body.append(airline_add_div);
+
+    $.ajax(root_url + 'airlines?filter[name]=' + input,
+        {
+            type: 'GET',
+            xhrFields: {withCredentials: true},
+            success: (airlines) => {
+                for (let i=0; i<airlines.length; i++) {
+                    let row = $('<tr></tr>');
+                    row.append("<td>" + airlines[i].name + "</td>");
+                    row.append("<td>"+ airlines[i].id + "</td>");
+                    airlines_table.append(row);
+                }
+            }
+        }
+    )
 };
 
 
