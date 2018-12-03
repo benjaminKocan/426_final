@@ -91,7 +91,7 @@ var build_airlines_interface = function() {
 var make_flights_page = function () {
     let body = $('body');
     body.empty();
-    body.append("<h2>Flights</h2>");
+    body.append('<h1 class="flightListHeader">Flights</h1>');
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');

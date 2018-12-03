@@ -12,6 +12,7 @@ body {
     border-style: groove;
     font-size: 20px;
     border-color: cornflowerblue;
+    padding: 10px;
 /*    text-align: center;*/
 }
 
@@ -20,11 +21,6 @@ body {
 /*    position: absolute;*/
 }
 
-#airlines_table tr, td {
-    padding: 10px;
-/*    text-align: center;*/
-    
-}
 
 #airlines_table tr:hover {
     background-color: aquamarine;
@@ -62,10 +58,34 @@ body {
 }
 
 #flight_list {
-    
+    width:100%;
 }
 
-.airlineColumn {
-/*    font-weight: bold;*/
+#flight_list, tr, td {
+    border-style: groove;
+    font-size: 20px;
+    border-color: cornflowerblue;
+    padding: 10px;
 }
+
+#flight_list tr:hover {
+    background-color: aquamarine;
+}
+
+#flight_list tr:first-child td {
+    font-size: 30px;
+    color: white;
+    background-color: cornflowerblue;
+    font-style: normal;
+    font-weight:bold;
+}
+
+.flightListHeader {
+    text-decoration: underline;
+    font-family:sans-serif;
+    color:cornflowerblue;
+    font-size: 40px;
+}
+
+
 
