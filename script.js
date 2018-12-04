@@ -79,7 +79,7 @@ var build_airlines_interface = function() {
     airlines_table.append('<tr><td>Airline</td><td>ID</td></tr>');
     body.append(airlines_table);
 
-    let airline_add_div = $("<div>New Airline: <input id='new_airline_name' type='text'><br>" +
+    let airline_add_div = $("<div>New Airline Name: <input id='new_airline_name' type='text'><br>" +
         "<button id='make_airline'>Create</button></div>");
 
     body.append(airline_add_div);
@@ -113,13 +113,8 @@ var build_airlines_interface = function() {
                 },
                 xhrFields: {withCredentials: true},
                 success: (airlines) => {
-                    for (let i=0; i<airlines.length; i++) {
-                        let row = $('<tr></tr>');
-                        row.append("<td>" + airlines[i].name + "</td>");
-                        row.append("<td>"+ airlines[i].id + "</td>");
-                        airlines_table.append(row);
+                    build_airlines_interface();
                     }
-                }
             });
     });
 
