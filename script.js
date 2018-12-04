@@ -65,7 +65,7 @@ var build_airlines_interface = function() {
 
     body.empty();
 
-    body.append('<h1 class="pageHeader">Find Your Airline</h1>');
+    body.append('<h1 class="pageHeader">FIND YOUR AIRLINE</h1>');
     let navbar_div = $('<div class="navbar_div"></div>');
     body.append(navbar_div);
     let navbar = $('<nav class="navbar" id="navbar"></nav>');
@@ -132,7 +132,7 @@ var build_airlines_interface = function() {
 var make_flights_page = function () {
     let body = $('body');
     body.empty();
-    body.append('<h1 class="pageHeader">Flights</h1>');
+    body.append('<h1 class="pageHeader">FLIGHTS</h1>');
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
@@ -170,7 +170,7 @@ var make_flights_page = function () {
 var make_tickets_page = function () {
     let body = $('body');
     body.empty();
-    body.append('<h1 class="pageHeader">Tickets</h1>');
+    body.append('<h1 class="pageHeader">TICKETS</h1>');
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
@@ -252,7 +252,7 @@ var make_tickets_page = function () {
 var make_airports_page = function () {
     let body = $('body');
     body.empty();
-    body.append('<h1 class="pageHeader">Airports</h1>');
+    body.append('<h1 class="pageHeader">AIRPORTS</h1>');
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="make_airports_page()">Airports</button>');
@@ -296,7 +296,7 @@ var airlines_filter_function = function () {
 
     body.empty();
 
-    body.append("<h2>Airlines</h2>");
+    body.append("<h2>AIRLINES</h2>");
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');

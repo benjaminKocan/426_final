@@ -14,8 +14,7 @@
     font-family: 'Open Sans',serif;
     color:cornflowerblue;
     font-size: 40px;
-    border-style: groove;
-    border-radius: 50%;
+    text-shadow: 1px 1px white;
 }
 
 .smallerSpacingDiv {
@@ -35,14 +34,19 @@
     font-size: 15px;
 }
 
-/*
-.searchBar span:first-child {
-    text-align: left;
+.planePic {
+    height: 80px;
 }
-*/
 
-.searchButton span:last-child {
-    text-align: right;
+#make_airline {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#redItem {
+    background-color: aquamarine;
 }
 
 .pageTable {
