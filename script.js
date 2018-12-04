@@ -129,6 +129,8 @@ var make_flights_page = function () {
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+    body.append('<div class="spacingDiv"></div>');
+
 
     let flights_table = $("<table id='flight_list'></table>");
     flights_table.append('<tr><td>Number</td><td>Departure Time</td><td>Arrival Time</td></tr>');
@@ -159,12 +161,14 @@ var make_flights_page = function () {
 var make_tickets_page = function () {
     let body = $('body');
     body.empty();
-    body.append("<h2>Tickets</h2>");
+    body.append('<h1 class="ticketPageHeader">Tickets</h1>');
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+
+    body.append('<div class="spacingDiv"></div>');
 
     let tickets_table = $("<table id='tickets_table'></table>");
     tickets_table.append('<tr><td>First Name</td><td>Middle Name</td><td>Last Name</td><td>Age</td><td>Gender</td><td>Price Paid</td><td>ID</td></tr>');
@@ -245,6 +249,8 @@ var make_airports_page = function () {
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+    
+    body.append('<div class="spacingDiv"></div>');
 
     let airports_table = $("<table id='airports_table'></table>");
     airports_table.append('<tr><td>Name</td><td>City</td><td>Code</td></tr>');
