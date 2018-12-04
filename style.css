@@ -1,10 +1,63 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 /*making a change in ben branch*/
+
+html { 
+  background: url("clearSky.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.avatar {
+    height: 120px;
+    border-radius: 50%;
+}
+
+.loginBox {
+    border-radius: 15%;
+    border-style: groove;
+    border-width: thick;
+    font-weight: bold;
+/*    background-color: antiquewhite;*/
+
+}
+
+.signUpBox {
+    border-radius: 15%;
+    border-style: groove;
+        border-width: thick;
+
+    font-weight: bold;
+/*    background-color: antiquewhite;*/
+}
+
+.frontPageUserInfo {
+    width: 50%;
+    padding-left: 25%
+    
+}
+
+.frontPagePasswordInfo {
+    width: 50%;
+    padding-left: 25%
+    
+}
+
 .mainPageHeader {
     text-decoration: underline;
     font-family: 'Open Sans',serif;
     color:white;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     background-color: lightskyblue;
 }
@@ -12,9 +65,18 @@
 .pageHeader {
     text-decoration: underline;
     font-family: 'Open Sans',serif;
+<<<<<<< HEAD
     color:cornflowerblue;
     font-size: 40px;
     text-shadow: 1px 1px white;
+=======
+    font-size: 70px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px cornflowerblue;
+/*    background-color: antiquewhite;*/
+    border-radius: 10%;
+    
+>>>>>>> benBranch
 }
 
 .smallerSpacingDiv {
@@ -30,14 +92,37 @@
 }
 
 .searchButton {
-    padding: 10px;
-    font-size: 15px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 80%;
 }
 
+<<<<<<< HEAD
 .planePic {
     height: 80px;
 }
 
+=======
+.searchButton:hover {
+    opacity: 0.8;
+    border-style: groove;
+}
+
+.planePic {
+    height: 80px;
+    padding-right: 200px;
+    transition: transform 300ms ease-in-out
+}
+
+.planePic:hover {
+    transform: translate(200px, 0px);
+}
+>>>>>>> benBranch
 #make_airline {
     padding-left: 20px;
     padding-right: 20px;
@@ -56,7 +141,8 @@
 .pageTable, tr, td {
     border-style: groove;
     font-size: 20px;
-    border-color: cornflowerblue;
+    font-weight: bold;
+    border-color: white;
     padding: 10px;
 }
 
@@ -72,40 +158,67 @@
     font-weight:bold;
 }
 
-.loginContainer {
-    text-align: left;
-    padding-left: 35%;
-}
-
-.signUpContainer {
-    text-align: left;
-    padding-left: 35%;
-}
-
 .loginHeader {
     text-decoration: underline;
     font-family: 'Open Sans',serif;
-    font-size: 30px;
+    font-size: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px cornflowerblue;
 }
 
 #login_btn {
-    font-weight: bold;
-    padding: 8px;
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #4CAF50;
     font-family: 'Open Sans',serif;
+    font-weight: bold;
+
+}
+#login_btn:hover {
+    opacity: 0.8;
+}
+#sign_up_btn {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #4CAF50;
+    font-family: 'Open Sans',serif;
+    font-weight: bold;
 }
 
-#sign_up_btn {
-    font-weight: bold;
-    padding: 8px;
+#sign_up_btn:hover {
+    opacity: 0.8;
+}
+
+#make_airline {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #4CAF50;
     font-family: 'Open Sans',serif;
+    font-weight: bold;
+}
+
+#make_airline:hover {
+    opacity: 0.8;
 }
 
 .signUpHeader {
     text-decoration: underline;
     font-family: 'Open Sans',serif;
-    font-size: 30px;
-    border-top-style:double;
-    border-color: cornflowerblue;
+    font-size: 40px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px cornflowerblue;
 }
 
 .firstSpacingDiv {
@@ -114,11 +227,8 @@
 
 body {
     text-align: center;
-    border-style: solid;
-    border-color: lightskyblue;
     padding: 10px;
     font-family: 'Open Sans',serif;
-    background-color:aliceblue;
 }
 
 .navbar-item {
@@ -130,8 +240,19 @@ body {
     font-weight: bold;
 }
 
+.navbar {
+    padding: 10px;
+/*    background-color: antiquewhite;*/
+    border-radius: 10%;
+}
+
 .spacingDiv {
     height:30px;
+}
+
+.newAirlineTitle {
+    font-weight: bold;
+    text-align: left;
 }
 
 .logoutButton {
@@ -142,5 +263,11 @@ body {
     font-weight: bold;
     font-size: 15px;
 }
+
+.logoutButton:hover {
+    opacity: 0.8;
+}
+
+
 
 
