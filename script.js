@@ -80,8 +80,13 @@ var build_airlines_interface = function() {
                     }
                 },
                 xhrFields: {withCredentials: true},
-                success: (airline) => {
-                    airline_list.append("<li>" + airline.name + "</li>");
+                success: (airlines) => {
+                    for (let i=0; i<airlines.length; i++) {
+                        let row = $('<tr></tr>');
+                        row.append("<td>" + airlines[i].name + "</td>");
+                        row.append("<td>"+ airlines[i].id + "</td>");
+                        airlines_table.append(row);
+                    }
                 }
             });
     });
@@ -131,6 +136,73 @@ var make_tickets_page = function () {
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+
+    let tickets_table = $("<table id='tickets_table'></table>");
+    tickets_table.append('<tr><td>First Name</td><td>Middle Name</td><td>Last Name</td><td>Age</td><td>Gender</td><td>Price Paid</td><td>ID</td></tr>');
+    body.append(tickets_table);
+
+    let ticket_add_div = $("<div>Name: <input id='f_name' type='text'><input id='l_name' type='text'><br>" +
+        "<button id='make_ticket'>Create Ticket</button></div>");
+    body.append(ticket_add_div);
+
+    $.ajax(root_url + "tickets",
+        {
+            type: 'GET',
+            xhrFields: {withCredentials: true},
+            success: (tickets) => {
+                for (let i=0; i<tickets.length; i++) {
+                    let row = $('<tr></tr>');
+                    row.append("<td>" + tickets[i].first_name + "</td>");
+                    row.append("<td>"+ tickets[i].middle_name + "</td>");
+                    row.append('<td>' + tickets[i].last_name + '</td>');
+                    row.append('<td>' + tickets[i].age + '</td>');
+                    row.append('<td>' + tickets[i].gender + '</td>');
+                    row.append('<td>' + tickets[i].price_paid + '</td>');
+                    row.append('<td>' + tickets[i].seat_id + '</td>');
+                    tickets_table.append(row);
+                }
+            }
+        });
+
+    $('#make_ticket').on('click', () => {
+        let f_name = $('#f_name').val();
+        let l_name = $('#l_name').val();
+
+        console.log(f_name);
+        console.log(l_name);
+
+        $.ajax(root_url + "tickets",
+            {
+                type: 'POST',
+                data: {
+                    "ticket": {
+                        "first_name":   f_name,
+                        "middle_name":  "west",
+                        "last_name":    l_name,
+                        "age":          "24",
+                        "gender":       "male",
+                        "is_purchased": true,
+                        "price_paid":   "291",
+                        "instance_id":  undefined,
+                        "itinerary_id": undefined,
+                        "seat_id":      undefined,
+                        "info":         ""
+                    }
+                },
+                xhrFields: {withCredentials: true},
+                success: (tickets) => {
+                    for (let i=0; i<tickets.length; i++) {
+                        let row = $('<tr></tr>');
+                        row.append("<td>" + tickets[i].first_name + "</td>");
+                        row.append("<td>"+ tickets[i].middle_name + "</td>");
+                        row.append("<td>"+ tickets[i].last_name + "</td>");
+                        row.append("<td>"+ tickets[i].age + "</td>");
+                        row.append("<td>"+ tickets[i].gender + "</td>");
+                        tickets_table.append(row);
+                    }
+                }
+            });
+    });
 };
 
 var make_airports_page = function () {
