@@ -1,4 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+.mainPageHeader {
+    text-decoration: underline;
+    font-family: 'Open Sans',serif;
+    color:white;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: lightskyblue;
+}
+
+.loginContainer {
+    text-align: left;
+    padding-left: 35%;
+}
+
+.signUpContainer {
+    text-align: left;
+    padding-left: 35%;
+}
+
+.loginHeader {
+    text-decoration: underline;
+    font-family: 'Open Sans',serif;
+/*    color:cornflowerblue;*/
+    font-size: 30px;
+}
+
+#login_btn {
+    font-weight: bold;
+    padding: 8px;
+    font-family: 'Open Sans',serif;
+/*    float: left;*/
+}
+
+#sign_up_btn {
+    font-weight: bold;
+    padding: 8px;
+    font-family: 'Open Sans',serif;
+}
+
+.signUpHeader {
+    text-decoration: underline;
+    font-family: 'Open Sans',serif;
+/*    color:cornflowerblue;*/
+    font-size: 30px;
+    border-top-style:double;
+    border-color: cornflowerblue;
+}
+
+.firstSpacingDiv {
+    height: 8px;
+}
+
 body {
+<<<<<<< HEAD
 <<<<<<< HEAD
     text-align-last: left;
 =======
@@ -7,12 +61,14 @@ body {
     text-align-last: center;
 >>>>>>> master
 =======
+=======
+>>>>>>> master
     text-align: center;
 >>>>>>> benBranch
     border-style: solid;
     border-color: lightskyblue;
     padding: 10px;
-    font-style: normal;
+    font-family: 'Open Sans',serif;
     background-color:aliceblue;
 }
 
@@ -20,6 +76,7 @@ body {
     border-style: groove;
     font-size: 20px;
     border-color: cornflowerblue;
+    padding: 10px;
 /*    text-align: center;*/
 }
 
@@ -28,11 +85,6 @@ body {
 /*    position: absolute;*/
 }
 
-#airlines_table tr, td {
-    padding: 10px;
-/*    text-align: center;*/
-    
-}
 
 #airlines_table tr:hover {
     background-color: aquamarine;
@@ -48,7 +100,7 @@ body {
 
 .findAirlinesHeader {
     text-decoration: underline;
-    font-family:sans-serif;
+    font-family: 'Open Sans',serif;
     color:cornflowerblue;
     font-size: 40px;
 }
@@ -56,6 +108,7 @@ body {
 #airport_list li  {
     width: 100%;
     list-style-type: none;
+/*    font-family: 'Open Sans',serif;*/
     border-style: groove;
     border-color: cornflowerblue;
 /*    padding: 5px;*/
@@ -64,16 +117,103 @@ body {
 
 .airportsPageHeader {
     text-decoration: underline;
-    font-family:sans-serif;
+    font-family: 'Open Sans',serif;
     color:cornflowerblue;
     font-size: 40px;
 }
 
+
 #flight_list {
-    
+    width:100%;
 }
 
-.airlineColumn {
-/*    font-weight: bold;*/
+#flight_list, tr, td {
+    border-style: groove;
+    font-size: 20px;
+    border-color: cornflowerblue;
+    padding: 10px;
 }
+
+#flight_list tr:hover {
+    background-color: aquamarine;
+}
+
+#flight_list tr:first-child td {
+    font-size: 30px;
+    color: white;
+    background-color: cornflowerblue;
+    font-style: normal;
+    font-weight:bold;
+}
+
+.flightListHeader {
+    text-decoration: underline;
+    font-family: 'Open Sans',serif;
+    color:cornflowerblue;
+    font-size: 40px;
+}
+
+
+#airports_table {
+    width:100%;
+}
+
+#airports_table, tr, td {
+    border-style: groove;
+    font-size: 20px;
+    border-color: cornflowerblue;
+    padding: 10px;
+}
+
+#airports_table tr:hover {
+    background-color: aquamarine;
+}
+
+#airports_table tr:first-child td {
+    font-size: 30px;
+    color: white;
+    background-color: cornflowerblue;
+    font-style: normal;
+    font-weight:bold;
+}
+
+.ticketPageHeader {
+    text-decoration: underline;
+    font-family: 'Open Sans',serif;
+    color:cornflowerblue;
+    font-size: 40px;
+}
+
+.navbar-item {
+    padding: 20px;
+}
+
+#tickets_table {
+    width:100%;
+}
+
+#tickets_table, tr, td {
+    border-style: groove;
+    font-size: 20px;
+    border-color: cornflowerblue;
+    padding: 10px;
+}
+
+#tickets_table tr:hover {
+    background-color: aquamarine;
+}
+
+#tickets_table tr:first-child td {
+    font-size: 20px;
+    color: white;
+    background-color: cornflowerblue;
+    font-style: normal;
+    font-weight:bold;
+}
+
+.spacingDiv {
+    height:30px;
+}
+
+
 
