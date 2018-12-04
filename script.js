@@ -156,8 +156,6 @@ var make_flights_page = function () {
 
     body.append('<div class="smallerSpacingDiv"></div>');
 
-    body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
-
     body.append(flight_add_div);
 
     body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
