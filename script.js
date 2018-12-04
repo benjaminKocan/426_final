@@ -66,11 +66,18 @@ var build_airlines_interface = function() {
     body.empty();
 
     body.append('<h1 class="findAirlinesHeader">Find Your Airline</h1>');
-    body.append('<nav class="navbar" id="navbar"></nav>');
+    let navbar_div = $('<div class="navbar_div"></div>');
+    body.append(navbar_div);
+    let navbar = $('<nav class="navbar" id="navbar"></nav>');
+    body.append(navbar);
+//    navbar_div.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+//    body.append(navbar_div);
+//    body.append(navbar);
+    
 
 
     body.append('<input type="text" id="search_text" placeholder="Search Airlines">');
