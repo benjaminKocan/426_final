@@ -28,6 +28,36 @@ $(document).ready(() => {
                 }
             });
     });
+
+    $('#sign_up_btn').on('click', () => {
+        let fname = $('#firstName').val();
+        let lname = $('#lastName').val();
+        // let email = $('#email').val();
+        let password = $('#password').val();
+
+        console.log(fname);
+        console.log(lname);
+
+        $.ajax(root_url + "users",
+            {
+                type: 'POST',
+                xhrFields: {withCredentials: true},
+                data: {
+                    user: {
+                        username: fname,
+                        password: password
+                    }
+                },
+                success: () => {
+                    alert('fuck yo shit');
+                    build_airlines_interface();
+                },
+                error: (jqxhr, status, error) => {
+                    alert(error);
+                }
+            });
+    });
+    
 });
 
 var build_airlines_interface = function() {
