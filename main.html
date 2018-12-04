@@ -5,23 +5,40 @@
     <title>Flight Booker 3 Hunnit</title>
     <script src="http://www.cs.unc.edu/~kmp/comp426fall18/jquery-3.3.1.js"></script>
     <script src="script.js"></script>
+    <link rel="shortcut icon" href="Mayer-patel.jpeg"/>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <h1 class="mainPageHeader">Login</h1>
-    <div>
-        <div>Username: <input id='user' type='text'></div>
-        <div>Password: <input id='pass' type='password'></div>
+    <div class="mainPageHederDiv">
+        <h1 class="pageHeader">Welcome to Flight Finder</h1>
+<!--        <img src="plane.png" class="planePic" id="planePicHome" alt="Italian Trulli">-->
+    </div>
+    <div class="loginBox">
+        <h2 class="loginHeader">Login</h2>
+        <img src="avatar.png" class="avatar">
+        <div class="loginContainer">
+            <div class="frontPageUserInfo">Username: <input id='user' type='text'></div>
+            <div class="frontPageUserInfo">Password: <input id='pass' type='password'></div>
+        </div>
+    
+        <div class="firstSpacingDiv"></div>
         <button id='login_btn'>Login</button>
     </div>
+    <div class="firstSpacingDiv"></div>
+    <div class="firstSpacingDiv"></div>
+    <div class="signUpBox">
+        <h2 class="signUpHeader">Sign Up</h2>
+        <div class="signUpContainer">
+            <div class="frontPageUserInfo">Username: <input id='firstName' type='text'></div>
+            <div class="frontPageUserInfo">Last Name: <input id='lastName' type='text'></div>
+            <div class="frontPageUserInfo">Email: <input id='email' type='text'></div>
+            <div class="frontPageUserInfo">Password: <input id='password' type='password'></div>
+        </div>
     
-    <h1 class="signUpHeader">Sign Up</h1>
-    <div>Username: <input id='firstName' type='text'></div>
-    <div>Last Name: <input id='lastName' type='text'></div>
-    <div>Email: <input id='email' type='text'></div>
-    <div>Password: <input id='password' type='password'></div>
-    <button id='sign_up_btn'>Sign Up</button>
+        <div class="firstSpacingDiv"></div>
+        <button id='sign_up_btn'>Sign Up</button>
+    </div>
 
 </body>
 </html>
