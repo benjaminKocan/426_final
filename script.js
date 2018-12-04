@@ -65,27 +65,36 @@ var build_airlines_interface = function() {
 
     body.empty();
 
-    body.append('<h1 class="findAirlinesHeader">Find Your Airline</h1>');
-    body.append('<nav class="navbar" id="navbar"></nav>');
-    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
+    body.append('<h1 class="pageHeader">FIND YOUR AIRLINE</h1>');
+    let navbar_div = $('<div class="navbar_div"></div>');
+    body.append(navbar_div);
+    let navbar = $('<nav class="navbar" id="navbar"></nav>');
+    body.append(navbar);
+    $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+    
+    body.append('<div class="spacingDiv"></div>');
+    body.append('<input class="searchBar" type="text" id="search_text" placeholder="Search Airlines">');
+    body.append('<button class="searchButton" onclick="airlines_filter_function()">Search</button>');
+    body.append('<div class="smallerSpacingDiv"></div>');
 
 
-    body.append('<input type="text" id="search_text" placeholder="Search Airlines">');
-    body.append('<button class="search_butt" onclick="airlines_filter_function()">Search</button>');
-
-    let airlines_table = $("<table id='airlines_table'></table>");
+    let airlines_table = $('<table class="pageTable"" id="airlines_table"></table>');
     airlines_table.append('<tr><td>Airline</td><td>ID</td></tr>');
     body.append(airlines_table);
+    body.append('<div class="smallerSpacingDiv"></div>');
 
-    let airline_add_div = $("<div>New Airline Name: <input id='new_airline_name' type='text'><br>" +
-        "<button id='make_airline'>Create</button></div>");
-
+    let airline_add_div = $("<div class='newAirlineTitle'>New Airline Name: <input id='new_airline_name' type='text' placeHolder='Enter Airline Here'><br>");
+                            
     body.append(airline_add_div);
+    
+    body.append("<button id='make_airline'>Create</button></div>");
+    
+    body.append('<div class="smallerSpacingDiv"></div>');
 
-    body.append('<button type="logout_Btn" onclick="logout()">Log Out</button>');
+    body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
 
     $.ajax(root_url + "airlines",
         {
@@ -124,16 +133,16 @@ var build_airlines_interface = function() {
 var make_flights_page = function () {
     let body = $('body');
     body.empty();
-    body.append('<h1 class="flightListHeader">Flights</h1>');
+    body.append('<h1 class="pageHeader">FLIGHTS</h1>');
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
-    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
+    $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
     body.append('<div class="spacingDiv"></div>');
 
 
-    let flights_table = $("<table id='flight_list'></table>");
+    let flights_table = $('<table class="pageTable" id="flight_list"></table>');
     flights_table.append('<tr><td>Number</td><td>Departure Time</td><td>Arrival Time</td></tr>');
     body.append(flights_table);
 
@@ -141,7 +150,7 @@ var make_flights_page = function () {
         "<button id='make_flight'>Create</button></div>");
     body.append(flight_add_div);
 
-    body.append('<button type="logout_Btn" onclick="logout()">Log Out</button>');
+    body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
 
     $.ajax(root_url + "flights",
         {
@@ -162,16 +171,16 @@ var make_flights_page = function () {
 var make_tickets_page = function () {
     let body = $('body');
     body.empty();
-    body.append('<h1 class="ticketPageHeader">Tickets</h1>');
+    body.append('<h1 class="pageHeader">TICKETS</h1>');
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
-    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+    $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
 
     body.append('<div class="spacingDiv"></div>');
 
-    let tickets_table = $("<table id='tickets_table'></table>");
+    let tickets_table = $('<table class="pageTable" id="tickets_table"></table>');
     tickets_table.append('<tr><td>First Name</td><td>Middle Name</td><td>Last Name</td><td>Age</td><td>Gender</td><td>Price Paid</td><td>ID</td></tr>');
     body.append(tickets_table);
 
@@ -179,7 +188,7 @@ var make_tickets_page = function () {
         "<button id='make_ticket'>Create Ticket</button></div>");
     body.append(ticket_add_div);
 
-    body.append('<button type="logout_Btn" onclick="logout()">Log Out</button>');
+    body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
 
     $.ajax(root_url + "tickets",
         {
@@ -244,19 +253,23 @@ var make_tickets_page = function () {
 var make_airports_page = function () {
     let body = $('body');
     body.empty();
-    body.append('<h1 class="airportsPageHeader">Airports</h1>');
+    body.append('<h1 class="pageHeader">AIRPORTS</h1>');
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
-    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
+    $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
     
     body.append('<div class="spacingDiv"></div>');
 
+<<<<<<< HEAD
     body.append('<input type="text" id="airport_code" placeholder="Search Airports By Code">');
     body.append('<button class="search_butt" onclick="airport_filter_function()">Search</button>');
 
     let airports_table = $("<table id='airports_table'></table>");
+=======
+    let airports_table = $('<table class="pageTable" id="airports_table"></table>');
+>>>>>>> 3a47887626e4029966d7da9bf7d1c64ae8188133
     airports_table.append('<tr><td>Name</td><td>City</td><td>Code</td></tr>');
     body.append(airports_table);
 
@@ -265,7 +278,7 @@ var make_airports_page = function () {
 
     body.append(airport_add_div);
 
-    body.append('<button type="logout_Btn" onclick="logout()">Log Out</button>');
+    body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
 
     $.ajax(root_url + "airports",
         {
@@ -333,17 +346,17 @@ var airlines_filter_function = function () {
 
     body.empty();
 
-    body.append("<h2>Airlines</h2>");
+    body.append("<h2>AIRLINES</h2>");
     body.append('<nav class="navbar" id="navbar"></nav>');
-    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
+    $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
 
-    body.append('<input type="text" id="search_text" placeholder="Search Airlines">');
-    body.append('<button class="search_butt" onclick="airlines_filter_function()">Search</button>');
+    body.append('<input class="searchBar" type="text" id="search_text" placeholder="Search Airlines">');
+    body.append('<button class="searchButton" onclick="airlines_filter_function()">Search</button>');
 
-    let airlines_table = $("<table id='airlines_table'></table>");
+    let airlines_table = $('<table class="pageTable" id="airlines_table"></table>');
     airlines_table.append('<tr><td>Name</td><td>ID</td></tr>');
     body.append(airlines_table);
 
