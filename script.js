@@ -72,6 +72,7 @@ var build_airlines_interface = function() {
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
 
+
     body.append('<input type="text" id="search_text" placeholder="Search Airlines">');
     body.append('<button class="search_butt" onclick="airlines_filter_function()">Search</button>');
 
@@ -327,3 +328,19 @@ var logout = function () {
         }
     });
 };
+
+
+
+var get_weather = function () {
+    $.ajax({
+        url: 'http://api.openweathermap.org/data/2.5/weather?zip='+ zip + '&units=imperial&APPID=c10a7fa753e41cd5f5c3302bf971968e',
+        type: 'GET',
+        xhrFields: {withCredentials: true},
+        success: (response) => {
+            if(response.status) {
+                alert('weather');
+            }
+        }
+    });
+
+}
