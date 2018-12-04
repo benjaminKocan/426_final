@@ -57,7 +57,7 @@ $(document).ready(() => {
                 }
             });
     });
-    
+
 });
 
 var build_airlines_interface = function() {
@@ -83,6 +83,8 @@ var build_airlines_interface = function() {
         "<button id='make_airline'>Create</button></div>");
 
     body.append(airline_add_div);
+
+    body.append('<button type="logout_Btn" onclick="logout()">Log Out</button>');
 
     $.ajax(root_url + "airlines",
         {
@@ -141,6 +143,8 @@ var make_flights_page = function () {
         "<button id='make_flight'>Create</button></div>");
     body.append(flight_add_div);
 
+    body.append('<button type="logout_Btn" onclick="logout()">Log Out</button>');
+
     $.ajax(root_url + "flights",
         {
             type: 'GET',
@@ -174,6 +178,8 @@ var make_tickets_page = function () {
     let ticket_add_div = $("<div>Name: <input id='f_name' type='text'><input id='l_name' type='text'><br>" +
         "<button id='make_ticket'>Create Ticket</button></div>");
     body.append(ticket_add_div);
+
+    body.append('<button type="logout_Btn" onclick="logout()">Log Out</button>');
 
     $.ajax(root_url + "tickets",
         {
@@ -254,6 +260,8 @@ var make_airports_page = function () {
 
     body.append(airport_add_div);
 
+    body.append('<button type="logout_Btn" onclick="logout()">Log Out</button>');
+
     $.ajax(root_url + "airports",
         {
             type: 'GET',
@@ -311,4 +319,16 @@ var airlines_filter_function = function () {
             }
         }
     )
+};
+
+var logout = function () {
+    $.ajax({
+        url: root_url + '/sessions',
+        type: 'DELETE',
+        xhrFields: { withCredentials: true },
+        success: (response) => {
+            alert('you have logged out');
+            location.reload(true);
+        }
+    });
 };
