@@ -9,6 +9,45 @@
     background-color: lightskyblue;
 }
 
+.pageHeader {
+    text-decoration: underline;
+    font-family: 'Open Sans',serif;
+    color:cornflowerblue;
+    font-size: 40px;
+    border-style: groove;
+    border-radius: 50%;
+}
+
+.pageTable {
+    width: 100%;
+    
+}
+
+.pageTable, tr, td {
+    border-style: groove;
+    font-size: 20px;
+    border-color: cornflowerblue;
+    padding: 10px;
+/*    text-align: center;*/
+}
+
+
+.pageTable tr:hover {
+    background-color: aquamarine;
+}
+
+.pageTable tr:first-child td {
+    font-size: 30px;
+    color: white;
+    background-color: cornflowerblue;
+    font-style: normal;
+    font-weight:bold;
+}
+
+
+
+
+
 .loginContainer {
     text-align: left;
     padding-left: 35%;
@@ -66,12 +105,11 @@ body {
     font-size: 20px;
     border-color: cornflowerblue;
     padding: 10px;
-/*    text-align: center;*/
+    text-align: center;
 }
 
 #airlines_table {
     width: 100%
-/*    position: absolute;*/
 }
 
 
@@ -85,31 +123,6 @@ body {
     background-color: cornflowerblue;
     font-style: normal;
     font-weight:bold;
-}
-
-.findAirlinesHeader {
-    text-decoration: underline;
-    font-family: 'Open Sans',serif;
-    color:cornflowerblue;
-    font-size: 40px;
-    border-style: groove;
-}
-
-#airport_list li  {
-    width: 100%;
-    list-style-type: none;
-/*    font-family: 'Open Sans',serif;*/
-    border-style: groove;
-    border-color: cornflowerblue;
-/*    padding: 5px;*/
-    
-}
-
-.airportsPageHeader {
-    text-decoration: underline;
-    font-family: 'Open Sans',serif;
-    color:cornflowerblue;
-    font-size: 40px;
 }
 
 
@@ -136,12 +149,6 @@ body {
     font-weight:bold;
 }
 
-.flightListHeader {
-    text-decoration: underline;
-    font-family: 'Open Sans',serif;
-    color:cornflowerblue;
-    font-size: 40px;
-}
 
 
 #airports_table {
@@ -167,12 +174,14 @@ body {
     font-weight:bold;
 }
 
+/*
 .ticketPageHeader {
     text-decoration: underline;
     font-family: 'Open Sans',serif;
     color:cornflowerblue;
     font-size: 40px;
 }
+*/
 
 .navbar-item {
     padding-left: 70px;
@@ -183,6 +192,7 @@ body {
     font-weight: bold;
 }
 
+/*
 #tickets_table {
     width:100%;
 }
@@ -205,10 +215,19 @@ body {
     font-style: normal;
     font-weight:bold;
 }
+*/
 
 .spacingDiv {
     height:30px;
 }
 
+.logoutButton {
+    padding: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: red;
+    font-weight: bold;
+    font-size: 15px;
+}
 
 
