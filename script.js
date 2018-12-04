@@ -65,7 +65,7 @@ var build_airlines_interface = function() {
 
     body.empty();
 
-    body.append('<h1 class="pageHeader">FIND YOUR AIRLINE</h1>');
+    body.append('<h1 class="pageHeader">Find Your Airline</h1>');
     let navbar_div = $('<div class="navbar_div"></div>');
     body.append(navbar_div);
     let navbar = $('<nav class="navbar" id="navbar"></nav>');
@@ -86,11 +86,11 @@ var build_airlines_interface = function() {
     body.append(airlines_table);
     body.append('<div class="smallerSpacingDiv"></div>');
 
-    let airline_add_div = $("<div class='newAirlineTitle'>New Airline Name: <input id='new_airline_name' type='text' placeHolder='Enter Airline Here'><br>");
+    let airline_add_div = $("<div class='newSomethingTitle'>New Airline Name: <input id='new_airline_name' type='text' placeHolder='Enter Airline Here'><br>");
 
     body.append(airline_add_div);
 
-    body.append("<button id='make_airline'>Create</button></div>");
+    body.append("<button class='createButton' id='make_airline'>Create</button></div>");
 
     body.append('<div class="smallerSpacingDiv"></div>');
 
@@ -133,7 +133,7 @@ var build_airlines_interface = function() {
 var make_flights_page = function () {
     let body = $('body');
     body.empty();
-    body.append('<h1 class="pageHeader">FLIGHTS</h1>');
+    body.append('<h1 class="pageHeader">Flights</h1>');
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
@@ -146,8 +146,18 @@ var make_flights_page = function () {
     flights_table.append('<tr><td>Number</td><td>Departure Time</td><td>Arrival Time</td></tr>');
     body.append(flights_table);
 
-    let flight_add_div = $("<div>Name: <input id='new_flight_name' type='text'><br>" +
-        "<button id='make_flight'>Create</button></div>");
+    body.append('<div class="smallerSpacingDiv"></div>');
+
+    let flight_add_div = $("<div class='newSomethingTitle'>New Flight Name: <input id='flight_name' type='text' placeHolder='Enter Flight Here'><br>");
+
+    body.append(flight_add_div);
+
+    body.append("<button class='createButton' id='make_airline'>Create</button></div>");
+
+    body.append('<div class="smallerSpacingDiv"></div>');
+
+    body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
+
     body.append(flight_add_div);
 
     body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
@@ -171,7 +181,7 @@ var make_flights_page = function () {
 var make_tickets_page = function () {
     let body = $('body');
     body.empty();
-    body.append('<h1 class="pageHeader">TICKETS</h1>');
+    body.append('<h1 class="pageHeader">Tickets</h1>');
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
@@ -185,7 +195,7 @@ var make_tickets_page = function () {
     body.append(tickets_table);
 
     let ticket_add_div = $("<div>Name: <input id='f_name' type='text'><input id='l_name' type='text'><br>" +
-        "<button id='make_ticket'>Create Ticket</button></div>");
+        "<button class='createButton' id='make_ticket'>Create Ticket</button></div>");
     body.append(ticket_add_div);
 
     body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
@@ -253,7 +263,7 @@ var make_tickets_page = function () {
 var make_airports_page = function () {
     let body = $('body');
     body.empty();
-    body.append('<h1 class="pageHeader">AIRPORTS</h1>');
+    body.append('<h1 class="pageHeader">Airports</h1>');
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="make_airports_page()">Airports</button>');
@@ -265,14 +275,16 @@ var make_airports_page = function () {
     body.append('<input type="text" id="airport_code" placeholder="Search Airports By Code">');
     body.append('<button class="search_butt" onclick="airport_filter_function()">Search</button>');
 
-    let airports_table = $("<table id='airports_table'></table>");
+    let airports_table = $('<table class="pageTable" id="airports_table"></table>');
     airports_table.append('<tr><td>Name</td><td>City</td><td>Code</td></tr>');
     body.append(airports_table);
 
-    let airport_add_div = $("<div>Name: <input id='new_airport_name' type='text'><br>" +
-        "<button id='make_airport'>Create</button></div>");
+    let airport_add_div = $("<div class='newSomethingTitle'>Name: <input id='new_airport_name' type='text'><br>");
 
     body.append(airport_add_div);
+    body.append("<button class='createButton' id='make_airport'>Create</button></div>");
+    body.append('<div class="smallerSpacingDiv"></div>');
+
 
     body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
 
@@ -342,7 +354,7 @@ var airlines_filter_function = function () {
 
     body.empty();
 
-    body.append("<h2>AIRLINES</h2>");
+    body.append("<h2>Airlines</h2>");
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
@@ -357,7 +369,7 @@ var airlines_filter_function = function () {
     body.append(airlines_table);
 
     let airline_add_div = $("<div>Name: <input id='new_airline_name' type='text'><br>" +
-        "<button id='make_airline'>Create</button></div>");
+        "<button class='createButton' id='make_airline'>Create</button></div>");
 
     body.append(airline_add_div);
 
