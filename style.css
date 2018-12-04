@@ -28,17 +28,13 @@ input[type=text], input[type=password] {
     border-style: groove;
     border-width: thick;
     font-weight: bold;
-/*    background-color: antiquewhite;*/
-
 }
 
 .signUpBox {
     border-radius: 15%;
     border-style: groove;
-        border-width: thick;
-
+    border-width: thick;
     font-weight: bold;
-/*    background-color: antiquewhite;*/
 }
 
 .frontPageUserInfo {
@@ -57,7 +53,7 @@ input[type=text], input[type=password] {
     text-decoration: underline;
     font-family: 'Open Sans',serif;
     color:white;
-    font-size: 50px;
+    font-size: 0px;
     font-weight: bold;
     background-color: lightskyblue;
 }
@@ -65,10 +61,9 @@ input[type=text], input[type=password] {
 .pageHeader {
     text-decoration: underline;
     font-family: 'Open Sans',serif;
-    font-size: 70px;
+    font-size: 80px;
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px cornflowerblue;
-/*    background-color: antiquewhite;*/
     border-radius: 10%;
     
 }
@@ -94,13 +89,17 @@ input[type=text], input[type=password] {
     border: none;
     cursor: pointer;
     width: 80%;
+    border-radius: 45%;
 }
 
 .searchButton:hover {
     opacity: 0.8;
     border-style: groove;
+    border-color: white;
+
 }
 
+/*
 .planePic {
     height: 80px;
     padding-right: 200px;
@@ -110,12 +109,7 @@ input[type=text], input[type=password] {
 .planePic:hover {
     transform: translate(200px, 0px);
 }
-#make_airline {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
+*/
 
 #redItem {
     background-color: aquamarine;
@@ -163,10 +157,14 @@ input[type=text], input[type=password] {
     background-color: #4CAF50;
     font-family: 'Open Sans',serif;
     font-weight: bold;
+    border-radius: 45%;
 
 }
 #login_btn:hover {
     opacity: 0.8;
+    border-style: groove;
+    border-color: white;
+
 }
 #sign_up_btn {
     width: 80%;
@@ -178,10 +176,14 @@ input[type=text], input[type=password] {
     background-color: #4CAF50;
     font-family: 'Open Sans',serif;
     font-weight: bold;
+    border-radius: 45%;
 }
 
 #sign_up_btn:hover {
     opacity: 0.8;
+    border-style: groove;
+    border-color: white;
+
 }
 
 #make_airline {
@@ -194,10 +196,28 @@ input[type=text], input[type=password] {
     background-color: #4CAF50;
     font-family: 'Open Sans',serif;
     font-weight: bold;
+    border-radius: 45%;
+
+}
+
+.createButton {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #4CAF50;
+    font-family: 'Open Sans',serif;
+    font-weight: bold;
+    border-radius: 45%;
+    color: white;
 }
 
 #make_airline:hover {
     opacity: 0.8;
+    border-style: groove;
+    border-color: white;
 }
 
 .signUpHeader {
@@ -229,7 +249,6 @@ body {
 
 .navbar {
     padding: 10px;
-/*    background-color: antiquewhite;*/
     border-radius: 10%;
 }
 
@@ -237,7 +256,7 @@ body {
     height:30px;
 }
 
-.newAirlineTitle {
+.newSomethingTitle {
     font-weight: bold;
     text-align: left;
 }
@@ -249,10 +268,15 @@ body {
     background-color: red;
     font-weight: bold;
     font-size: 15px;
+    border-radius: 45%;
+    color: white;
+
 }
 
 .logoutButton:hover {
     opacity: 0.8;
+    border-style: groove;
+    border-color: white;
 }
 
 
