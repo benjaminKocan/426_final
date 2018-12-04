@@ -74,7 +74,7 @@ var build_airlines_interface = function() {
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
-    
+
     body.append('<div class="spacingDiv"></div>');
     body.append('<input class="searchBar" type="text" id="search_text" placeholder="Search Airlines">');
     body.append('<button class="searchButton" onclick="airlines_filter_function()">Search</button>');
@@ -87,11 +87,11 @@ var build_airlines_interface = function() {
     body.append('<div class="smallerSpacingDiv"></div>');
 
     let airline_add_div = $("<div class='newAirlineTitle'>New Airline Name: <input id='new_airline_name' type='text' placeHolder='Enter Airline Here'><br>");
-                            
+
     body.append(airline_add_div);
-    
+
     body.append("<button id='make_airline'>Create</button></div>");
-    
+
     body.append('<div class="smallerSpacingDiv"></div>');
 
     body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
@@ -259,17 +259,13 @@ var make_airports_page = function () {
     $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
-    
+
     body.append('<div class="spacingDiv"></div>');
 
-<<<<<<< HEAD
     body.append('<input type="text" id="airport_code" placeholder="Search Airports By Code">');
     body.append('<button class="search_butt" onclick="airport_filter_function()">Search</button>');
 
     let airports_table = $("<table id='airports_table'></table>");
-=======
-    let airports_table = $('<table class="pageTable" id="airports_table"></table>');
->>>>>>> 3a47887626e4029966d7da9bf7d1c64ae8188133
     airports_table.append('<tr><td>Name</td><td>City</td><td>Code</td></tr>');
     body.append(airports_table);
 
