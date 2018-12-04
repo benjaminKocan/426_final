@@ -91,6 +91,7 @@ body {
     font-family: 'Open Sans',serif;
     color:cornflowerblue;
     font-size: 40px;
+    border-style: groove;
 }
 
 #airport_list li  {
@@ -173,7 +174,12 @@ body {
 }
 
 .navbar-item {
-    padding: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 #tickets_table {
