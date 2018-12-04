@@ -253,6 +253,9 @@ var make_airports_page = function () {
     
     body.append('<div class="spacingDiv"></div>');
 
+    body.append('<input type="text" id="airport_code" placeholder="Search Airports By Code">');
+    body.append('<button class="search_butt" onclick="airport_filter_function()">Search</button>');
+
     let airports_table = $("<table id='airports_table'></table>");
     airports_table.append('<tr><td>Name</td><td>City</td><td>Code</td></tr>');
     body.append(airports_table);
@@ -278,6 +281,48 @@ var make_airports_page = function () {
                 }
             }
         });
+};
+
+var airport_filter_function = function () {
+    let body = $('body');
+    let airp_code = $('#airport_code').val();
+
+    body.empty();
+
+    body.append("<h2>Airports</h2>");
+    body.append('<nav class="navbar" id="navbar"></nav>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+
+    body.append('<input type="text" id="airport_code" placeholder="Search Airports By Code">');
+    body.append('<button class="search_butt" onclick="airport_filter_function()">Search</button>');
+
+    let airports_table = $("<table id='airlines_table'></table>");
+    airports_table.append('<tr><td>Name</td><td>City</td><td>Code</td></tr>');
+    body.append(airports_table);
+
+    let airports_add_div = $("<div>Name: <input id='new_airport_name' type='text'><br>" +
+        "<button id='make_airport'>Create</button></div>");
+
+    body.append(airports_add_div);
+
+    $.ajax(root_url + 'airports?filter[code]=' + airp_code,
+        {
+            type: 'GET',
+            xhrFields: {withCredentials: true},
+            success: (airports) => {
+                for (let i=0; i <airports.length; i++) {
+                    let row = $('<tr></tr>');
+                    row.append("<td>" + airports[i].name + "</td>");
+                    row.append("<td>"+ airports[i].city + "</td>");
+                    row.append('<td>' + airports[i].code + '</td>');
+                    airports_table.append(row);
+                }
+            }
+        }
+    )
 };
 
 var airlines_filter_function = function () {
