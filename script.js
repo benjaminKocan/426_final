@@ -84,8 +84,9 @@ var build_airlines_interface = function() {
     let airlines_table = $('<table class="pageTable"" id="airlines_table"></table>');
     airlines_table.append('<tr><td>Airline</td><td>ID</td></tr>');
     body.append(airlines_table);
+    body.append('<div class="smallerSpacingDiv"></div>');
 
-    let airline_add_div = $("<div>New Airline Name: <input id='new_airline_name' type='text'><br>");
+    let airline_add_div = $("<div class='newAirlineTitle'>New Airline Name: <input id='new_airline_name' type='text' placeHolder='Enter Airline Here'><br>");
                             
     body.append(airline_add_div);
     
