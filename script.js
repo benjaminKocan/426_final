@@ -156,8 +156,6 @@ var make_flights_page = function () {
 
     body.append('<div class="smallerSpacingDiv"></div>');
 
-    body.append(flight_add_div);
-
     body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
 
     $.ajax(root_url + "flights",
@@ -184,7 +182,7 @@ var make_tickets_page = function () {
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
-    $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
 
     body.append('<div class="spacingDiv"></div>');
 
@@ -192,9 +190,11 @@ var make_tickets_page = function () {
     tickets_table.append('<tr><td>First Name</td><td>Middle Name</td><td>Last Name</td><td>Age</td><td>Gender</td><td>Price Paid</td><td>ID</td></tr>');
     body.append(tickets_table);
 
-    let ticket_add_div = $("<div>Name: <input id='f_name' type='text'><input id='l_name' type='text'><br>" +
-        "<button class='createButton' id='make_ticket'>Create Ticket</button></div>");
+    let ticket_add_div = $("<div class='newSomethingTitle'>Name: <input id='f_name' type='text' placeHolder='First Name'><input id='l_name' type='text' placeHolder='Last Name'><br>");
     body.append(ticket_add_div);
+
+    body.append("<button class='createButton' id='make_airline'>Create</button></div>");
+    body.append('<div class="smallerSpacingDiv"></div>');
 
     body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
 
@@ -261,7 +261,7 @@ var make_tickets_page = function () {
 var make_airports_page = function () {
     let body = $('body');
     body.empty();
-    body.append('<h1 class="pageHeader">Airports</h1>');
+    body.append('<h1 class="pageHeader">Find Airports</h1>');
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="make_airports_page()">Airports</button>');
@@ -270,19 +270,20 @@ var make_airports_page = function () {
 
     body.append('<div class="spacingDiv"></div>');
 
-    body.append('<input type="text" id="airport_code" placeholder="Search Airports By Code">');
-    body.append('<button class="search_butt" onclick="airport_filter_function()">Search</button>');
+    body.append('<input class="searchBar" type="text" id="airport_code" placeholder="Search Airports By Code">');
+    body.append('<button class="searchButton" onclick="airport_filter_function()">Search</button>');
 
     let airports_table = $('<table class="pageTable" id="airports_table"></table>');
     airports_table.append('<tr><td>Name</td><td>City</td><td>Code</td></tr>');
     body.append(airports_table);
-
-    let airport_add_div = $("<div class='newSomethingTitle'>Name: <input id='new_airport_name' type='text'><br>");
+    
+    body.append('<div class="smallerSpacingDiv"></div>');
+    
+    let airport_add_div = $("<div class='newSomethingTitle'>New Airport Name: <input class='searchBar' id='new_airport_name' type='text' placeHolder='Enter Aiport Name Here'><br>");
 
     body.append(airport_add_div);
     body.append("<button class='createButton' id='make_airport'>Create</button></div>");
     body.append('<div class="smallerSpacingDiv"></div>');
-
 
     body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
 
@@ -321,11 +322,15 @@ var airport_filter_function = function () {
     let airports_table = $("<table id='airlines_table'></table>");
     airports_table.append('<tr><td>Name</td><td>City</td><td>Code</td></tr>');
     body.append(airports_table);
+    
+    let airport_add_div = $("<div class='newSomethingTitle'>New Airport Name: <input class='searchBar' id='new_airport_name' type='text' placeHolder='Enter Aiport Name Here'><br>");
 
-    let airports_add_div = $("<div>Name: <input id='new_airport_name' type='text'><br>" +
-        "<button id='make_airport'>Create</button></div>");
+    body.append(airport_add_div);
+    body.append("<button class='createButton' id='make_airport'>Create</button></div>");
+    body.append('<div class="smallerSpacingDiv"></div>');
 
-    body.append(airports_add_div);
+    body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
+
 
     $.ajax(root_url + 'airports?filter[code]=' + airp_code,
         {
@@ -352,7 +357,7 @@ var airlines_filter_function = function () {
 
     body.empty();
 
-    body.append("<h2>Airlines</h2>");
+    body.append("<h1 class='pageHeader'>Find Airlines</h1>");
     body.append('<nav class="navbar" id="navbar"></nav>');
     $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
@@ -366,11 +371,16 @@ var airlines_filter_function = function () {
     airlines_table.append('<tr><td>Name</td><td>ID</td></tr>');
     body.append(airlines_table);
 
-    let airline_add_div = $("<div>Name: <input id='new_airline_name' type='text'><br>" +
-        "<button class='createButton' id='make_airline'>Create</button></div>");
+    let airline_add_div = $("<div class='newSomethingTitle'>New Airline Name: <input id='new_airline_name' type='text' placeHolder='Enter Airline Here'><br>");
 
     body.append(airline_add_div);
 
+    body.append("<button class='createButton' id='make_airline'>Create</button></div>");
+
+    body.append('<div class="smallerSpacingDiv"></div>');
+
+    body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
+    
     $.ajax(root_url + 'airlines?filter[name]=' + sear_text,
         {
             type: 'GET',
