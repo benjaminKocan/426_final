@@ -150,12 +150,24 @@ var make_flights_page = function () {
 
     let flight_add_div = $("<div class='newSomethingTitle'>New Flight Name: <input id='flight_name' type='text' placeHolder='Enter Flight Here'><br>");
 
+<<<<<<< HEAD
     body.append(flight_add_div);
 
     body.append("<button class='createButton' id='make_airline'>Create</button></div>");
 
     body.append('<div class="smallerSpacingDiv"></div>');
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> benBranch
+    body.append(flight_add_div);
+
+    body.append("<button class='createButton' id='make_airline'>Create</button></div>");
+
+    body.append('<div class="smallerSpacingDiv"></div>');
+
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
     body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
 
     $.ajax(root_url + "flights",
@@ -182,7 +194,37 @@ var make_tickets_page = function () {
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="build_airlines_interface()">Airlines</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_airports_page()">Airports</button>');
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_flights_page()">Flights</button>');
+<<<<<<< HEAD
     $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+=======
+<<<<<<< HEAD
+    $('#navbar').append('<button class="navbar-item" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+
+    let tickets_table = $("<table id='tickets_table'></table>");
+    tickets_table.append('<tr><td>Number</td><td>Departure Time</td><td>Arrival Time</td></tr>');
+    body.append(tickets_table);
+
+    let tickets_add_div = $("<div>Name: <input id='new_ticket_name' type='text'><br>" +
+        "<button id='make_ticket'>Create</button></div>");
+    body.append(tickets_add_div);
+
+    $.ajax(root_url + "flights",
+        {
+            type: 'GET',
+            xhrFields: {withCredentials: true},
+            success: (flights) => {
+                for (let i=0; i<flights.length; i++) {
+                    let row = $('<tr></tr>');
+                    row.append("<td>" + flights[i].number + "</td>");
+                    row.append("<td>"+ flights[i].departs_at.substring(11,16) + "</td>");
+                    row.append('<td>' + flights[i].arrives_at.substring(11,16) + '</td>');
+                    flights_table.append(row);
+                }
+            }
+        });
+=======
+    $('#navbar').append('<button class="navbar-item" id="redItem" type="navBtn" onclick="make_tickets_page()">Tickets</button>');
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
 
     body.append('<div class="spacingDiv"></div>');
 
@@ -190,7 +232,16 @@ var make_tickets_page = function () {
     tickets_table.append('<tr><td>First Name</td><td>Middle Name</td><td>Last Name</td><td>Age</td><td>Gender</td><td>Price Paid</td><td>ID</td></tr>');
     body.append(tickets_table);
 
+<<<<<<< HEAD
     let ticket_add_div = $("<div class='newSomethingTitle'>Name: <input id='f_name' type='text' placeHolder='First Name'><input id='l_name' type='text' placeHolder='Last Name'><br>");
+=======
+<<<<<<< HEAD
+    let ticket_add_div = $("<div>Name: <input id='f_name' type='text'><input id='l_name' type='text'><br>" +
+        "<button class='createButton' id='make_ticket'>Create Ticket</button></div>");
+=======
+    let ticket_add_div = $("<div class='newSomethingTitle'>Name: <input id='f_name' type='text' placeHolder='First Name'><input id='l_name' type='text' placeHolder='Last Name'><br>");
+>>>>>>> benBranch
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
     body.append(ticket_add_div);
 
     body.append("<button class='createButton' id='make_airline'>Create</button></div>");
@@ -256,6 +307,7 @@ var make_tickets_page = function () {
                 }
             });
     });
+>>>>>>> fb79f1e7edcb88a3a4d8eed837d68dcc3e74622e
 };
 
 var make_airports_page = function () {
@@ -270,21 +322,49 @@ var make_airports_page = function () {
 
     body.append('<div class="spacingDiv"></div>');
 
+<<<<<<< HEAD
     body.append('<input class="searchBar" type="text" id="airport_code" placeholder="Search Airports By Code">');
     body.append('<button class="searchButton" onclick="airport_filter_function()">Search</button>');
+=======
+<<<<<<< HEAD
+    body.append('<input type="text" id="airport_code" placeholder="Search Airports By Code">');
+    body.append('<button class="search_butt" onclick="airport_filter_function()">Search</button>');
+=======
+    body.append('<input class="searchBar" type="text" id="airport_code" placeholder="Search Airports By Code">');
+    body.append('<button class="searchButton" onclick="airport_filter_function()">Search</button>');
+>>>>>>> benBranch
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
 
     let airports_table = $('<table class="pageTable" id="airports_table"></table>');
     airports_table.append('<tr><td>Name</td><td>City</td><td>Code</td></tr>');
     body.append(airports_table);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    let airport_add_div = $("<div class='newSomethingTitle'>Name: <input id='new_airport_name' type='text'><br>");
+=======
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
     
     body.append('<div class="smallerSpacingDiv"></div>');
     
     let airport_add_div = $("<div class='newSomethingTitle'>New Airport Name: <input class='searchBar' id='new_airport_name' type='text' placeHolder='Enter Aiport Name Here'><br>");
+<<<<<<< HEAD
+=======
+>>>>>>> benBranch
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
 
     body.append(airport_add_div);
     body.append("<button class='createButton' id='make_airport'>Create</button></div>");
     body.append('<div class="smallerSpacingDiv"></div>');
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> benBranch
+
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
     body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
 
     $.ajax(root_url + "airports",
@@ -322,6 +402,23 @@ var airport_filter_function = function () {
     let airports_table = $("<table id='airlines_table'></table>");
     airports_table.append('<tr><td>Name</td><td>City</td><td>Code</td></tr>');
     body.append(airports_table);
+<<<<<<< HEAD
+    
+    let airport_add_div = $("<div class='newSomethingTitle'>New Airport Name: <input class='searchBar' id='new_airport_name' type='text' placeHolder='Enter Aiport Name Here'><br>");
+=======
+<<<<<<< HEAD
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
+
+    body.append(airport_add_div);
+    body.append("<button class='createButton' id='make_airport'>Create</button></div>");
+    body.append('<div class="smallerSpacingDiv"></div>');
+
+    body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
+
+<<<<<<< HEAD
+=======
+    body.append(airports_add_div);
+=======
     
     let airport_add_div = $("<div class='newSomethingTitle'>New Airport Name: <input class='searchBar' id='new_airport_name' type='text' placeHolder='Enter Aiport Name Here'><br>");
 
@@ -331,6 +428,8 @@ var airport_filter_function = function () {
 
     body.append('<button class="logoutButton" type="logout_Btn" onclick="logout()">Log Out</button>');
 
+>>>>>>> benBranch
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
 
     $.ajax(root_url + 'airports?filter[code]=' + airp_code,
         {
@@ -371,7 +470,16 @@ var airlines_filter_function = function () {
     airlines_table.append('<tr><td>Name</td><td>ID</td></tr>');
     body.append(airlines_table);
 
+<<<<<<< HEAD
     let airline_add_div = $("<div class='newSomethingTitle'>New Airline Name: <input id='new_airline_name' type='text' placeHolder='Enter Airline Here'><br>");
+=======
+<<<<<<< HEAD
+    let airline_add_div = $("<div>Name: <input id='new_airline_name' type='text'><br>" +
+        "<button class='createButton' id='make_airline'>Create</button></div>");
+=======
+    let airline_add_div = $("<div class='newSomethingTitle'>New Airline Name: <input id='new_airline_name' type='text' placeHolder='Enter Airline Here'><br>");
+>>>>>>> benBranch
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
 
     body.append(airline_add_div);
 

@@ -68,7 +68,20 @@ input[type=text], input[type=password] {
 .pageHeader {
 /*    text-decoration: underline;*/
     font-family: 'Open Sans',serif;
+<<<<<<< HEAD
     font-size: 80px;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    color:cornflowerblue;
+    font-size: 40px;
+    text-shadow: 1px 1px white;
+=======
+    font-size: 70px;
+=======
+    font-size: 80px;
+>>>>>>> benBranch
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px cornflowerblue;
 /*    border-radius: 10%;*/
@@ -106,6 +119,21 @@ input[type=text], input[type=password] {
     border-style: groove;
     border-color: white;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+.planePic:hover {
+    transform: translate(200px, 0px);
+}
+>>>>>>> benBranch
+#make_airline {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+=======
+>>>>>>> benBranch
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
 }
 
 #redItem {

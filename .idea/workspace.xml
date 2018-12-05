@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b4eba54-a397-4607-9ad3-3a250ecc010d" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/main.html" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+>>>>>>> fb79f1e7edcb88a3a4d8eed837d68dcc3e74622e
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
@@ -21,8 +28,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/script.js">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="245">
               <caret line="254" column="21" lean-forward="true" selection-start-line="254" selection-start-column="21" selection-end-line="254" selection-end-column="21" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="295">
+              <caret line="157" column="4" lean-forward="true" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="173">
+              <caret line="135" column="83" selection-start-line="135" selection-start-column="83" selection-end-line="135" selection-end-column="83" />
+=======
+            <state relative-caret-position="349">
+              <caret line="338" column="32" lean-forward="true" selection-start-line="338" selection-start-column="32" selection-end-line="338" selection-end-column="32" />
+>>>>>>> fb79f1e7edcb88a3a4d8eed837d68dcc3e74622e
+>>>>>>> benBranch
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
             </state>
           </provider>
         </entry>
@@ -30,8 +52,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-460">
               <caret line="118" column="10" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="23">
+              <caret line="139" column="10" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="10" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="230">
+              <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+=======
+            <state relative-caret-position="236">
+              <caret line="72" column="33" lean-forward="true" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+>>>>>>> fb79f1e7edcb88a3a4d8eed837d68dcc3e74622e
+>>>>>>> benBranch
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
             </state>
           </provider>
         </entry>
@@ -39,8 +76,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="46">
               <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+=======
+<<<<<<< HEAD
+            <state relative-caret-position="2001">
+              <caret line="87" column="1" lean-forward="true" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
+=======
+            <state relative-caret-position="23">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+>>>>>>> fb79f1e7edcb88a3a4d8eed837d68dcc3e74622e
+>>>>>>> benBranch
             </state>
           </provider>
         </entry>
@@ -135,7 +182,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="23342000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="22821000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="13958000" />
+=======
+    <option name="totallyTimeSpent" value="19166000" />
+>>>>>>> fb79f1e7edcb88a3a4d8eed837d68dcc3e74622e
+>>>>>>> benBranch
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="777" extended-state="6" />
@@ -166,22 +225,62 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-460">
           <caret line="118" column="10" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="23">
+          <caret line="139" column="10" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="10" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="230">
+          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+=======
+        <state relative-caret-position="236">
+          <caret line="72" column="33" lean-forward="true" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+>>>>>>> fb79f1e7edcb88a3a4d8eed837d68dcc3e74622e
+>>>>>>> benBranch
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="46">
           <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="2001">
+          <caret line="87" column="1" lean-forward="true" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
+=======
+        <state relative-caret-position="23">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+>>>>>>> fb79f1e7edcb88a3a4d8eed837d68dcc3e74622e
+>>>>>>> benBranch
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/script.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="245">
           <caret line="254" column="21" lean-forward="true" selection-start-line="254" selection-start-column="21" selection-end-line="254" selection-end-column="21" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="295">
+          <caret line="157" column="4" lean-forward="true" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
+=======
+<<<<<<< HEAD
+        <state relative-caret-position="173">
+          <caret line="135" column="83" selection-start-line="135" selection-start-column="83" selection-end-line="135" selection-end-column="83" />
+=======
+        <state relative-caret-position="349">
+          <caret line="338" column="32" lean-forward="true" selection-start-line="338" selection-start-column="32" selection-end-line="338" selection-end-column="32" />
+>>>>>>> fb79f1e7edcb88a3a4d8eed837d68dcc3e74622e
+>>>>>>> benBranch
+>>>>>>> b3365711142ef9706451bb2b383de5e2185d80e3
         </state>
       </provider>
     </entry>
